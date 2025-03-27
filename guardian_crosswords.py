@@ -16,9 +16,10 @@ import puz
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 import re 
+import os
 
-crossword_type = "quick-cryptic" # ["quick", "speedy", "quick-cryptic", "everyman", "quiptic", "cryptic", "prize"]
-crossword_number = 51
+crossword_type = "quiptic" # ["quick", "speedy", "quick-cryptic", "everyman", "quiptic", "cryptic", "prize"]
+crossword_number = 1310
 
 ## Most crosswords are 15x15. Quick cryptic is 11x11.
 width = 11 if (crossword_type == "quick-cryptic") else 15
@@ -62,14 +63,14 @@ across_clues = clues.find(attrs={"class": "crossword__clues--across"}).find_all(
 for clue in across_clues:
     location, text = clue.get_text().split(" ", 1)
     number = clue.get("value")
-    clue = Clue(number, "A", text, "")
+    clue = Clue(int(number), "A", text, "")
     across_clues_data[location] = clue
        
 down_clues = clues.find(attrs={"class": "crossword__clues--down"}).find_all("li")
 for clue in down_clues:
     location, text = clue.get_text().split(" ", 1)
     number = clue.get("value")
-    clue = Clue(number, "D", text, "")
+    clue = Clue(int(number), "D", text, "")
     down_clues_data[location] = clue
 
 letter_to_number = {
@@ -104,7 +105,6 @@ all_clues = set(down_clues_data.values()) | set(across_clues_data.values())
 sorted_clues = sorted(all_clues)
 
 sorted_clue_text = [clue.text for clue in sorted_clues]
-sorted_clue_solutions = [clue.solution for clue in sorted_clues]
 
 p.fill = fill
 p.clues = sorted_clue_text
@@ -155,8 +155,23 @@ if solution:
 
     p.solution = sol
 
-output_name = f"Guardian_{crossword_type}_{crossword_number}.puz"    
-p.save(output_name)
+
+output_name = f"Guardian_{crossword_type}_{crossword_number}.puz" 
+cwd_name = os.getcwd()
+dir_name = os.path.join(cwd_name, "outputs", crossword_type)
+
+try:
+    os.makedirs(dir_name)
+except FileExistsError:
+    pass
+except PermissionError:
+    print(f"Permission denied: Unable to create '{dir_name}'.")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+file_name = os.path.join(dir_name, output_name)
+
+p.save(file_name)
 
     
     
