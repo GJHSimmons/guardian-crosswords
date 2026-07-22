@@ -1,0 +1,7 @@
+flask>=3.0,<4.0
+flask-Cors>=4.0,<5.0
+flask-SocketIO>=5.3,<6.0
+beautifulsoup4>=4.12,<5.0
+eventlet>=0.36,<1.0
+gunicorn>=22.0,<24.0
+puzpy>=0.2,<1.0

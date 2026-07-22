@@ -1,0 +1,430 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.crossword.grid svg {
+  display: block;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #f5f5f0;
+  color: #1a1a1a;
+}
+
+.app {
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #052962;
+}
+
+.picker {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.picker select,
+.picker input {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+.picker button {
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  background: #052962;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.picker button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.error {
+  color: #c00;
+  margin-bottom: 1rem;
+}
+
+.puzzle-header {
+  margin-bottom: 1rem;
+}
+
+.puzzle-header h2 {
+  font-size: 1.2rem;
+  color: #052962;
+}
+
+.puzzle-header p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.crossword-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  gap: 1.5em;
+  align-items: flex-start;
+}
+
+.clues-panel {
+  flex: 0 0 320px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.clues-panel .direction {
+  margin-bottom: 1rem;
+}
+
+.clues-panel .header {
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #052962;
+}
+
+.clues-panel .clue {
+  font-size: clamp(0.65rem, 1.4vw, 0.82rem);
+  line-height: 1.35;
+  padding: 0.15rem 0.1rem;
+  cursor: pointer;
+}
+
+.clue.incorrect {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.clue.correct {
+  text-decoration: line-through;
+  color: #aaa;
+  opacity: 0.5;
+}
+
+@media (max-width: 700px) {
+  .crossword-wrapper {
+    flex-direction: column;
+  }
+
+  .clues-panel {
+    max-height: none;
+    width: 100%;
+  }
+
+  .clues-panel .clue {
+    font-size: 0.85rem;
+  }
+
+  .clues-panel .header {
+    font-size: 0.95rem;
+  }
+}
+
+.active-clue {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+  background: #f0f4ff;
+  border-left: 3px solid #052962;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 0.75rem;
+  min-height: 2.6rem;
+}
+
+.active-clue-placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.active-clue-label {
+  font-weight: bold;
+  color: #052962;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+}
+
+.control-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.2rem;
+}
+
+.btn-check, .btn-reveal, .btn-clear, .btn-anagram {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: opacity 0.1s;
+}
+
+.btn-check  { background: #0a7; color: white; }
+.btn-reveal { background: #06c; color: white; }
+.btn-clear  { background: #888; color: white; }
+.btn-anagram { background: #7b2d8b; color: white; }
+
+.btn-check:hover, .btn-reveal:hover, .btn-clear:hover, .btn-anagram:hover { opacity: 0.85; }
+.btn-check:disabled, .btn-reveal:disabled, .btn-clear:disabled, .btn-anagram:disabled { opacity: 0.4; cursor: default; }
+
+/* ── Anagram helper popup ───────────────────────────────────────── */
+.anagram-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.anagram-popup {
+  background: white;
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  width: min(480px, 92vw);
+}
+
+.anagram-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.anagram-popup-meta { flex: 1; }
+
+.anagram-popup-num {
+  display: block;
+  font-weight: bold;
+  color: #052962;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.anagram-popup-clue {
+  display: block;
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.35;
+}
+
+.anagram-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #888;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.anagram-close:hover { color: #222; }
+
+.anagram-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 0.65rem;
+}
+
+.anagram-box {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.anagram-box.empty  { background: #f5f5f0; }
+.anagram-box.user   { background: #e3eeff; border-color: #4a7fd4; }
+.anagram-box.locked { background: #fff3cd; border-color: #c8a000; }
+
+.anagram-overflow {
+  font-size: 0.75rem;
+  color: #a00;
+  margin-bottom: 0.5rem;
+}
+
+.anagram-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.anagram-input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.05rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.anagram-input:focus { outline: 2px solid #4a7fd4; border-color: transparent; }
+
+.anagram-count {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.anagram-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.anagram-actions button {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+.anagram-actions button:hover:not(:disabled) { background: #f0f4ff; border-color: #4a7fd4; }
+.anagram-actions button:disabled { opacity: 0.4; cursor: default; }
+
+.anagram-hint {
+  font-size: 0.72rem;
+  color: #999;
+  line-height: 1.3;
+}
+
+.feedback {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.feedback-correct  { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.feedback-wrong    { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.feedback-info     { background: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+
+/* ── Game session bar ──────────────────────────────────────────── */
+.game-bar {
+  background: #eef2ff;
+  border: 1px solid #c5cff0;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.game-id-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.game-id-label {
+  color: #555;
+  font-weight: bold;
+}
+
+.game-id-code {
+  font-family: monospace;
+  font-size: 0.82rem;
+  color: #052962;
+  background: #dce4f5;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+.btn-copy-link {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  background: #052962;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-copy-link:hover { opacity: 0.85; }
+
+.players-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.player-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.player-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
