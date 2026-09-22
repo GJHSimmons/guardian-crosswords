@@ -91,12 +91,12 @@ h1 {
 /* Grid sizing (#13): shrink to fit, but never below --min-cell per cell;
    past that floor .grid-scroll scrolls instead. --cols/--rows are set
    inline per puzzle. --grid-max-w is the widest the grid may get: no
-   taller than the viewport, and no more than --max-cell per cell. */
+   taller than --grid-max-h, and no more than --max-cell per cell.
+   --grid-max-h is set per layout: the space below the header on desktop
+   (#15, see the min-width block at the end), the viewport on phones. */
 .crossword-wrapper {
   --min-cell: 24px;
   --max-cell: 40px;
-  --grid-max-h: calc(100vh - 2.5rem);
-  --grid-max-h: calc(100dvh - 2.5rem);
   --grid-max-w: min(
     calc(var(--grid-max-h) * var(--cols) / var(--rows)),
     calc(var(--cols) * var(--max-cell))
@@ -105,14 +105,9 @@ h1 {
   padding: 1rem;
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  display: flex;
-  gap: 1.5em;
-  align-items: flex-start;
 }
 
 .grid-scroll {
-  /* Start at the widest allowed size; shrink when the row is narrower. */
-  flex: 0 1 var(--grid-max-w);
   min-width: 0;
   overflow-x: auto;
 }
@@ -123,9 +118,7 @@ h1 {
 }
 
 .clues-panel {
-  flex: 0 0 320px;
   overflow-y: auto;
-  max-height: calc(var(--grid-max-w) * var(--rows) / var(--cols));
 }
 
 .clues-panel .direction {
@@ -159,7 +152,11 @@ h1 {
 
 @media (max-width: 899.98px) {
   /* Phone/tablet: single column, clues below, grid full-bleed across the
-     screen so a 15x15 still clears the cell floor on a 360px phone. */
+     screen so a 15x15 still clears the cell floor on a 360px phone.
+     Controls and the active clue live inside .crossword-wrapper (so desktop
+     can put them beside the grid), but here they stay above it and outside
+     the white card, as before #15: the card's white background and shadow
+     go on the grid and clue list instead of the wrapper. */
   .app {
     max-width: none;
     padding: 1rem 0.75rem;
@@ -168,15 +165,30 @@ h1 {
   .crossword-wrapper {
     --grid-max-h: calc(100vh - 1rem);
     --grid-max-h: calc(100dvh - 1rem);
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     margin-inline: -0.75rem;
-    padding: 0.75rem 0;
+    padding: 0;
     border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .crossword-wrapper > .controls,
+  .crossword-wrapper > .feedback,
+  .crossword-wrapper > .active-clue {
+    margin-inline: 0.75rem;
+  }
+
+  .crossword-wrapper > .feedback {
+    align-self: flex-start;
   }
 
   .grid-scroll {
-    flex: none;
+    background: white;
+    padding-top: 0.75rem;
+    box-shadow: 0 -1px 4px -2px rgba(0,0,0,0.1);
   }
 
   .grid-container {
@@ -185,9 +197,9 @@ h1 {
   }
 
   .clues-panel {
-    flex: none;
-    max-height: none;
-    padding-inline: 0.75rem;
+    background: white;
+    padding: 1.5em 0.75rem 0.75rem;
+    box-shadow: 0 4px 4px -3px rgba(0,0,0,0.1);
   }
 
   .clues-panel .clue {
@@ -486,4 +498,153 @@ h1 {
   height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+/* ── Desktop: compact header, controls beside the grid (#15) ───────
+   Everything above the grid is squeezed into two short lines (title +
+   picker + game bar, then puzzle title), and the controls, feedback and
+   active clue move into the right-hand column above the clue list, so
+   the whole grid and the current clue fit on a 768px-tall laptop.
+   --grid-top is the wrapper's page y, measured in App.jsx; the grid gets
+   what is left of the viewport below it, minus the wrapper's own padding
+   and .app's bottom padding. The fallback covers the first paint. */
+@media (min-width: 900px) {
+  .app {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .topbar header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.25rem;
+    margin: 0;
+  }
+
+  .topbar h1 {
+    font-size: 1.35rem;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .picker select,
+  .picker input,
+  .picker button {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .picker button {
+    padding-inline: 0.8rem;
+  }
+
+  .picker input {
+    width: 6.5rem;
+  }
+
+  .game-bar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 1rem;
+    margin: 0;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .game-id-row {
+    font-size: 0.8rem;
+  }
+
+  .puzzle-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .puzzle-header h2 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .puzzle-header p {
+    font-size: 0.85rem;
+  }
+
+  .crossword-wrapper {
+    /* rem, so it tracks the root font (18px, 16px at <=1024px) that also
+       sizes the buttons: each control group stays on one line. */
+    --side-w: 20rem;
+    --grid-max-h: calc(100vh - var(--grid-top, 6.5rem) - 2.75rem);
+    --grid-max-h: calc(100dvh - var(--grid-top, 6.5rem) - 2.75rem);
+    display: grid;
+    grid-template-columns: minmax(0, var(--grid-max-w)) var(--side-w);
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+      "grid controls"
+      "grid feedback"
+      "grid clue"
+      "grid clues";
+    column-gap: 1.5em;
+    justify-content: start;
+  }
+
+  .grid-scroll {
+    grid-area: grid;
+    align-self: start;
+  }
+
+  .crossword-wrapper > .controls {
+    grid-area: controls;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .control-group {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .control-label {
+    font-size: 0.72rem;
+  }
+
+  .btn-check, .btn-reveal, .btn-clear, .btn-anagram, .btn-undo {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .crossword-wrapper > .feedback {
+    grid-area: feedback;
+    justify-self: start;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .crossword-wrapper > .active-clue {
+    grid-area: clue;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Height 0 keeps the clue list out of the row sizing, so the grid alone
+     sets the wrapper's height; min-height then fills whatever is left of
+     the column below the controls and active clue, and the list scrolls. */
+  .clues-panel {
+    grid-area: clues;
+    height: 0;
+    min-height: 100%;
+  }
 }
