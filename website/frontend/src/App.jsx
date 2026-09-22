@@ -289,6 +289,9 @@ export default function App() {
   const checkAll = useCallback(() => {
     if (!crosswordRef.current || !data) return
     let removed = 0
+    const seen = new Set()
+    let total = 0
+    let filled = 0
     for (const dir of ['across', 'down']) {
       for (const num of Object.keys(data[dir])) {
         getWordCells(dir, num).forEach(({ row, col, letter }) => {
@@ -300,10 +303,17 @@ export default function App() {
             emitCell(row, col, '')
             removed++
           }
+          if (!seen.has(key)) {
+            seen.add(key)
+            total++
+            if (playerGuesses.current[key] === letter) filled++
+          }
         })
       }
     }
-    if (removed === 0) {
+    if (removed === 0 && filled === total) {
+      showFeedback('correct', 'Crossword complete — all correct!')
+    } else if (removed === 0) {
       showFeedback('correct', 'All correct so far!')
     } else {
       showFeedback('wrong', `${removed} incorrect letter${removed > 1 ? 's' : ''} removed`)
