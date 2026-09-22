@@ -476,6 +476,7 @@ export default function App() {
               data={data}
               theme={{ columnBreakpoint: '9999px' }}
               onCellChange={handleCellChange}
+              useStorage={false}
             >
               <SelectionWatcher onSelectionChange={handleClueSelected} />
               <div
