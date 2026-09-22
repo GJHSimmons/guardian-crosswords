@@ -1,0 +1,784 @@
+{
+  "375x812": {
+    "baseline": {
+      "grid": [
+        0,
+        524,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1463
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        458,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "copied": {
+      "grid": [
+        0,
+        524,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1463
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        458,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copied!",
+      "buttonBg": "rgb(30, 126, 52)",
+      "feedback": null
+    },
+    "clipboard": "http://localhost:5221/game/b243c961-7f44-4be4-b29b-f44aa91d45c7",
+    "url": "http://localhost:5221/game/b243c961-7f44-4be4-b29b-f44aa91d45c7",
+    "copiedReverted": {
+      "grid": [
+        0,
+        524,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1463
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        458,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "selectedClue": "1 Across: One saluting domestic appliance (7)",
+    "checkWrong": {
+      "grid": [
+        0,
+        577,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1516
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        511,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "1 incorrect letter removed",
+        "kind": "feedback feedback-wrong",
+        "rect": [
+          12,
+          458,
+          252,
+          41
+        ]
+      }
+    },
+    "checkWrongCleared": {
+      "grid": [
+        0,
+        524,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1463
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        458,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "checkCorrect": {
+      "grid": [
+        0,
+        577,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1516
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        511,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "No mistakes!",
+        "kind": "feedback feedback-correct",
+        "rect": [
+          12,
+          458,
+          143,
+          41
+        ]
+      }
+    },
+    "revealAll": {
+      "grid": [
+        0,
+        555,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1494
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        150
+      ],
+      "activeClue": [
+        12,
+        489,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "undoReveal": {
+      "grid": [
+        0,
+        577,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1516
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        511,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "Reveal undone",
+        "kind": "feedback feedback-info",
+        "rect": [
+          12,
+          458,
+          158,
+          41
+        ]
+      }
+    },
+    "copyFailed": {
+      "grid": [
+        0,
+        600,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1539
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        534,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "http://localhost:5221/game/b243c961-7f44-4be4-b29b-f44aa91d45c7",
+        "kind": "feedback feedback-info",
+        "rect": [
+          12,
+          458,
+          357,
+          64
+        ]
+      }
+    },
+    "copyFailedCleared": {
+      "grid": [
+        0,
+        524,
+        375,
+        375
+      ],
+      "wrapper": [
+        0,
+        327,
+        375,
+        1463
+      ],
+      "controls": [
+        12,
+        327,
+        351,
+        119
+      ],
+      "activeClue": [
+        12,
+        458,
+        351,
+        42
+      ],
+      "button": [
+        166,
+        184,
+        72,
+        20
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    }
+  },
+  "1366x768": {
+    "baseline": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "copied": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copied!",
+      "buttonBg": "rgb(30, 125, 52)",
+      "feedback": null
+    },
+    "clipboard": "http://localhost:5221/game/b6c15642-4b89-4332-a2d6-154176218c0c",
+    "url": "http://localhost:5221/game/b6c15642-4b89-4332-a2d6-154176218c0c",
+    "copiedReverted": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "selectedClue": "1 Across: One saluting domestic appliance (7)",
+    "checkWrong": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        247,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "1 incorrect letter removed",
+        "kind": "feedback feedback-wrong",
+        "rect": [
+          706,
+          199,
+          236,
+          39
+        ]
+      }
+    },
+    "checkWrongCleared": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "checkCorrect": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        247,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "No mistakes!",
+        "kind": "feedback feedback-correct",
+        "rect": [
+          706,
+          199,
+          132,
+          39
+        ]
+      }
+    },
+    "revealAll": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    },
+    "undoReveal": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        247,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "Reveal undone",
+        "kind": "feedback feedback-info",
+        "rect": [
+          706,
+          199,
+          146,
+          39
+        ]
+      }
+    },
+    "copyFailed": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        273,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": {
+        "text": "http://localhost:5221/game/b6c15642-4b89-4332-a2d6-154176218c0c",
+        "kind": "feedback feedback-info",
+        "rect": [
+          706,
+          199,
+          360,
+          65
+        ]
+      }
+    },
+    "copyFailedCleared": {
+      "grid": [
+        79,
+        112,
+        600,
+        600
+      ],
+      "wrapper": [
+        61,
+        94,
+        1244,
+        636
+      ],
+      "controls": [
+        706,
+        112,
+        360,
+        78
+      ],
+      "activeClue": [
+        706,
+        199,
+        360,
+        60
+      ],
+      "button": [
+        800,
+        20,
+        80,
+        23
+      ],
+      "buttonLabel": "Copy link",
+      "buttonBg": "rgb(5, 41, 98)",
+      "feedback": null
+    }
+  }
+}
