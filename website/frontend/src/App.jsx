@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useContext, useEffect } from 'react'
+import { useState, useCallback, useRef, useContext, useEffect, useLayoutEffect } from 'react'
 import { CrosswordProvider, CrosswordGrid, DirectionClues, CrosswordContext } from '@jaredreisinger/react-crossword'
 import { io } from 'socket.io-client'
 import AnagramHelper from './AnagramHelper'
@@ -52,6 +52,24 @@ export default function App() {
   const suppressEmit = useRef(false)
   const revealAllSnapshot = useRef(null) // guesses map from just before the last reveal-all
   const [canUndoRevealAll, setCanUndoRevealAll] = useState(false)
+  const appRef = useRef(null)
+  const wrapperRef = useRef(null)
+  const [gridTop, setGridTop] = useState(null) // page y of .crossword-wrapper, for desktop grid sizing
+
+  // Desktop sizes the grid to the space below the header (#15), so it needs
+  // to know where the header ends. Re-measure whenever anything in .app
+  // changes size: a resize, the players row appearing, the header wrapping.
+  useLayoutEffect(() => {
+    if (!data || !appRef.current) return
+    const measure = () => {
+      if (!wrapperRef.current) return
+      setGridTop(Math.round(wrapperRef.current.getBoundingClientRect().top + window.scrollY))
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(appRef.current)
+    return () => ro.disconnect()
+  }, [data])
 
   const showFeedback = useCallback((kind, msg) => {
     if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
@@ -378,54 +396,52 @@ export default function App() {
   }, [showFeedback])
 
   return (
-    <div className="app">
-      <header>
-        <h1>Guardian Crosswords</h1>
-        <form onSubmit={handleSubmit} className="picker">
-          <select value={type} onChange={e => setType(e.target.value)}>
-            {CROSSWORD_TYPES.map(t => (
-              <option key={t} value={t}>{t}</option>
-            ))}
-          </select>
-          <input
-            type="number"
-            placeholder="Number"
-            value={number}
-            onChange={e => setNumber(e.target.value)}
-            min="1"
-            required
-          />
-          <button type="submit" disabled={loading}>
-            {loading ? 'Loading...' : 'Load'}
-          </button>
-        </form>
-      </header>
-
-      {gameId && (
-        <div className="game-bar">
-          <div className="game-id-row">
-            <span className="game-id-label">Game:</span>
-            <code className="game-id-code">{gameId.slice(0, 8)}…</code>
-            <button className="btn-copy-link" onClick={copyGameLink}>Copy link</button>
-          </div>
-          {Object.keys(players).length > 0 && (
-            <div className="players-row">
-              {Object.entries(players).map(([pid, p]) => (
-                <span key={pid} className="player-entry">
-                  <span className="player-dot" style={{ backgroundColor: p.color }} />
-                  {p.name}{pid === myPlayerId ? ' (you)' : ''}
-                </span>
+    <div className="app" ref={appRef}>
+      <div className="topbar">
+        <header>
+          <h1>Guardian Crosswords</h1>
+          <form onSubmit={handleSubmit} className="picker">
+            <select value={type} onChange={e => setType(e.target.value)}>
+              {CROSSWORD_TYPES.map(t => (
+                <option key={t} value={t}>{t}</option>
               ))}
+            </select>
+            <input
+              type="number"
+              placeholder="Number"
+              value={number}
+              onChange={e => setNumber(e.target.value)}
+              min="1"
+              required
+            />
+            <button type="submit" disabled={loading}>
+              {loading ? 'Loading...' : 'Load'}
+            </button>
+          </form>
+        </header>
+
+        {gameId && (
+          <div className="game-bar">
+            <div className="game-id-row">
+              <span className="game-id-label">Game:</span>
+              <code className="game-id-code">{gameId.slice(0, 8)}…</code>
+              <button className="btn-copy-link" onClick={copyGameLink}>Copy link</button>
             </div>
-          )}
-        </div>
-      )}
+            {Object.keys(players).length > 0 && (
+              <div className="players-row">
+                {Object.entries(players).map(([pid, p]) => (
+                  <span key={pid} className="player-entry">
+                    <span className="player-dot" style={{ backgroundColor: p.color }} />
+                    {p.name}{pid === myPlayerId ? ' (you)' : ''}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
 
       {error && <p className="error">Error: {error}</p>}
-
-      {feedback && (
-        <div className={`feedback feedback-${feedback.kind}`}>{feedback.msg}</div>
-      )}
 
       {data && (
         <main>
@@ -434,45 +450,17 @@ export default function App() {
             <p>{author}</p>
           </div>
 
-          <div className="controls">
-            <div className="control-group">
-              <span className="control-label">Word:</span>
-              <button onClick={checkWord} className="btn-check">Check</button>
-              <button onClick={revealWord} className="btn-reveal">Reveal</button>
-              <button onClick={clearWord} className="btn-clear">Clear</button>
-              <button
-                onClick={() => setAnagramOpen(true)}
-                className="btn-anagram"
-                disabled={!selectedDir || !selectedNum}
-              >
-                Anagram
-              </button>
-            </div>
-            <div className="control-group">
-              <span className="control-label">All:</span>
-              <button onClick={checkAll} className="btn-check">Check</button>
-              <button onClick={revealAll} className="btn-reveal">Reveal</button>
-              {canUndoRevealAll && (
-                <button onClick={undoRevealAll} className="btn-undo">Undo Reveal</button>
-              )}
-              <button onClick={clearAll} className="btn-clear">Clear</button>
-            </div>
-          </div>
-
-          <div className="active-clue">
-            {selectedDir && selectedNum && data[selectedDir]?.[selectedNum] ? (
-              <>
-                <span className="active-clue-label">
-                  {selectedNum} {selectedDir === 'across' ? 'Across' : 'Down'}:
-                </span>
-                {' '}{data[selectedDir][selectedNum].clue}
-              </>
-            ) : <span className="active-clue-placeholder">Select a clue to begin</span>}
-          </div>
-
+          {/* Controls, feedback and active clue sit inside the wrapper so that
+              on desktop they can share the right-hand column with the clue
+              list (#15); on phones the wrapper stacks them above the grid. */}
           <div
             className="crossword-wrapper"
-            style={{ '--cols': gridSize.width, '--rows': gridSize.height }}
+            ref={wrapperRef}
+            style={{
+              '--cols': gridSize.width,
+              '--rows': gridSize.height,
+              ...(gridTop != null && { '--grid-top': `${gridTop}px` }),
+            }}
           >
             <CrosswordProvider
               ref={crosswordRef}
@@ -482,6 +470,46 @@ export default function App() {
               useStorage={false}
             >
               <SelectionWatcher onSelectionChange={handleClueSelected} />
+              <div className="controls">
+                <div className="control-group">
+                  <span className="control-label">Word:</span>
+                  <button onClick={checkWord} className="btn-check">Check</button>
+                  <button onClick={revealWord} className="btn-reveal">Reveal</button>
+                  <button onClick={clearWord} className="btn-clear">Clear</button>
+                  <button
+                    onClick={() => setAnagramOpen(true)}
+                    className="btn-anagram"
+                    disabled={!selectedDir || !selectedNum}
+                  >
+                    Anagram
+                  </button>
+                </div>
+                <div className="control-group">
+                  <span className="control-label">All:</span>
+                  <button onClick={checkAll} className="btn-check">Check</button>
+                  <button onClick={revealAll} className="btn-reveal">Reveal</button>
+                  {canUndoRevealAll && (
+                    <button onClick={undoRevealAll} className="btn-undo">Undo Reveal</button>
+                  )}
+                  <button onClick={clearAll} className="btn-clear">Clear</button>
+                </div>
+              </div>
+
+              {feedback && (
+                <div className={`feedback feedback-${feedback.kind}`}>{feedback.msg}</div>
+              )}
+
+              <div className="active-clue">
+                {selectedDir && selectedNum && data[selectedDir]?.[selectedNum] ? (
+                  <>
+                    <span className="active-clue-label">
+                      {selectedNum} {selectedDir === 'across' ? 'Across' : 'Down'}:
+                    </span>
+                    {' '}{data[selectedDir][selectedNum].clue}
+                  </>
+                ) : <span className="active-clue-placeholder">Select a clue to begin</span>}
+              </div>
+
               <div className="grid-scroll">
                 <div className="grid-container">
                   <CrosswordGrid />
