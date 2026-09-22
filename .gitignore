@@ -4,3 +4,7 @@ output_files/
 # collab-protocol worktrees — the pushed branch is the claim, not this directory.
 # .claude/resume/ must stay tracked, so this ignores the worktree path specifically.
 .claude/worktrees/
+
+# Python bytecode — regenerated on every backend run.
+__pycache__/
+*.pyc
