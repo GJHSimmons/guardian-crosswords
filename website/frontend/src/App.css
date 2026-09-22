@@ -220,7 +220,7 @@ h1 {
   margin-right: 0.2rem;
 }
 
-.btn-check, .btn-reveal, .btn-clear, .btn-anagram {
+.btn-check, .btn-reveal, .btn-clear, .btn-anagram, .btn-undo {
   padding: 0.3rem 0.7rem;
   font-size: 0.85rem;
   border: none;
@@ -235,9 +235,10 @@ h1 {
 .btn-reveal { background: #06c; color: white; }
 .btn-clear  { background: #888; color: white; }
 .btn-anagram { background: #7b2d8b; color: white; }
+.btn-undo   { background: #c60; color: white; }
 
-.btn-check:hover, .btn-reveal:hover, .btn-clear:hover, .btn-anagram:hover { opacity: 0.85; }
-.btn-check:disabled, .btn-reveal:disabled, .btn-clear:disabled, .btn-anagram:disabled { opacity: 0.4; cursor: default; }
+.btn-check:hover, .btn-reveal:hover, .btn-clear:hover, .btn-anagram:hover, .btn-undo:hover { opacity: 0.85; }
+.btn-check:disabled, .btn-reveal:disabled, .btn-clear:disabled, .btn-anagram:disabled, .btn-undo:disabled { opacity: 0.4; cursor: default; }
 
 /* ── Anagram helper popup ───────────────────────────────────────── */
 .anagram-overlay {
