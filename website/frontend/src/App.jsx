@@ -47,7 +47,7 @@ export default function App() {
   const [myPlayerId, setMyPlayerId] = useState(null)
   const [players, setPlayers] = useState({})       // { player_id: { name, color } }
   const [cellOwners, setCellOwners] = useState({}) // { "row,col": player_id }
-  const gridSize = useRef({ width: 15, height: 15 })
+  const [gridSize, setGridSize] = useState({ width: 15, height: 15 })
   const pendingState = useRef(null)
   const suppressEmit = useRef(false)
   const revealAllSnapshot = useRef(null) // guesses map from just before the last reveal-all
@@ -81,7 +81,7 @@ export default function App() {
       setTitle(json.title)
       setAuthor(json.author)
       setData({ across: json.across, down: json.down })
-      gridSize.current = { width: json.width || 15, height: json.height || 15 }
+      setGridSize({ width: json.width || 15, height: json.height || 15 })
       let game_id = existingGameId
       if (!game_id) {
         const gameRes = await fetch('/api/game', {
@@ -470,7 +470,10 @@ export default function App() {
             ) : <span className="active-clue-placeholder">Select a clue to begin</span>}
           </div>
 
-          <div className="crossword-wrapper">
+          <div
+            className="crossword-wrapper"
+            style={{ '--cols': gridSize.width, '--rows': gridSize.height }}
+          >
             <CrosswordProvider
               ref={crosswordRef}
               data={data}
@@ -479,18 +482,17 @@ export default function App() {
               useStorage={false}
             >
               <SelectionWatcher onSelectionChange={handleClueSelected} />
-              <div
-                className="grid-container"
-                style={{ aspectRatio: `${gridSize.current.width} / ${gridSize.current.height}` }}
-              >
-                <CrosswordGrid />
-                <PlayerOverlay
-                  cellOwners={cellOwners}
-                  players={players}
-                  myPlayerId={myPlayerId}
-                  gridWidth={gridSize.current.width}
-                  gridHeight={gridSize.current.height}
-                />
+              <div className="grid-scroll">
+                <div className="grid-container">
+                  <CrosswordGrid />
+                  <PlayerOverlay
+                    cellOwners={cellOwners}
+                    players={players}
+                    myPlayerId={myPlayerId}
+                    gridWidth={gridSize.width}
+                    gridHeight={gridSize.height}
+                  />
+                </div>
               </div>
               <div className="clues-panel">
                 <DirectionClues direction="across" />
