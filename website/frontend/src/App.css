@@ -4,7 +4,14 @@
   padding: 0;
 }
 
+/* react-crossword's grid SVG ships with a viewBox but no width/height,
+   leaving sizing to us; without a definite size here it either balloons
+   unbounded on wide screens or collapses to zero on narrow ones. */
+.grid-container .crossword.grid,
+.grid-container .crossword.grid > div,
 .crossword.grid svg {
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
@@ -91,6 +98,16 @@ h1 {
   align-items: flex-start;
 }
 
+.grid-container {
+  position: relative;
+  /* Definite flex-basis, capped, so the grid can't grow past a sane size;
+     aspect-ratio (set inline, per-puzzle) derives height from that width. */
+  flex: 1 1 min(65vh, 600px);
+  max-width: min(65vh, 600px);
+  min-width: 0;
+  min-height: 0;
+}
+
 .clues-panel {
   flex: 0 0 320px;
   overflow-y: auto;
@@ -129,6 +146,15 @@ h1 {
 @media (max-width: 700px) {
   .crossword-wrapper {
     flex-direction: column;
+  }
+
+  .grid-container {
+    /* Stacked layout: width is no longer competing with the clues panel
+       for horizontal space, so size from the viewport's own width rather
+       than the vh-based cap meant for the side-by-side desktop layout. */
+    flex-basis: auto;
+    width: 100%;
+    max-width: 100%;
   }
 
   .clues-panel {
