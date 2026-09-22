@@ -41,6 +41,8 @@ export default function App() {
   const playerGuesses = useRef({})
   const [feedback, setFeedback] = useState(null)
   const feedbackTimer = useRef(null)
+  const [linkCopied, setLinkCopied] = useState(false)
+  const linkCopiedTimer = useRef(null)
   const currentRoom = useRef(null)   // { game_id }
   const playerId = useRef(getPlayerId())
   const [gameId, setGameId] = useState(null)
@@ -389,11 +391,22 @@ export default function App() {
     if (currentRoom.current) socket.emit('clear_all', { game_id: currentRoom.current.game_id })
   }, [])
 
+  // Copy link confirms on the button itself (#18); only the fallback URL,
+  // shown when the clipboard is unavailable, uses the controls' feedback slot.
+  // Wrapped in a promise because navigator.clipboard is undefined outside
+  // secure contexts (e.g. a phone on the LAN over plain http).
   const copyGameLink = useCallback(() => {
-    navigator.clipboard.writeText(window.location.href)
-      .then(() => showFeedback('correct', 'Link copied!'))
+    Promise.resolve()
+      .then(() => navigator.clipboard.writeText(window.location.href))
+      .then(() => {
+        if (linkCopiedTimer.current) clearTimeout(linkCopiedTimer.current)
+        setLinkCopied(true)
+        linkCopiedTimer.current = setTimeout(() => setLinkCopied(false), 2000)
+      })
       .catch(() => showFeedback('info', window.location.href))
   }, [showFeedback])
+
+  useEffect(() => () => clearTimeout(linkCopiedTimer.current), [])
 
   return (
     <div className="app" ref={appRef}>
@@ -425,7 +438,13 @@ export default function App() {
             <div className="game-id-row">
               <span className="game-id-label">Game:</span>
               <code className="game-id-code">{gameId.slice(0, 8)}…</code>
-              <button className="btn-copy-link" onClick={copyGameLink}>Copy link</button>
+              <button
+                className={`btn-copy-link${linkCopied ? ' copied' : ''}`}
+                onClick={copyGameLink}
+              >
+                <span className="btn-copy-link-idle">Copy link</span>
+                <span className="btn-copy-link-done">Copied!</span>
+              </button>
             </div>
             {Object.keys(players).length > 0 && (
               <div className="players-row">
