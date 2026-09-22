@@ -1,0 +1,542 @@
+[
+  {
+    "file": "before-quiptic-1300-375x812.png",
+    "scrolledOnSelect": 0,
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "hOverflow": false,
+    "grid": {
+      "x": 0,
+      "y": 537,
+      "w": 375,
+      "h": 375,
+      "bottom": 912,
+      "right": 375
+    },
+    "controls": {
+      "x": 12,
+      "y": 327,
+      "w": 351,
+      "h": 119,
+      "bottom": 446,
+      "right": 363
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 458,
+      "w": 351,
+      "h": 55,
+      "bottom": 513,
+      "right": 363
+    },
+    "clues": {
+      "x": 0,
+      "y": 936,
+      "w": 375,
+      "h": 929,
+      "bottom": 1865,
+      "right": 375
+    },
+    "cell": 25,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-quiptic-1300-768x1024.png",
+    "scrolledOnSelect": 0,
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "hOverflow": false,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600,
+      "bottom": 1001,
+      "right": 684
+    },
+    "controls": {
+      "x": 12,
+      "y": 287,
+      "w": 744,
+      "h": 36,
+      "bottom": 323,
+      "right": 756
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 335,
+      "w": 744,
+      "h": 42,
+      "bottom": 377,
+      "right": 756
+    },
+    "clues": {
+      "x": 0,
+      "y": 1025,
+      "w": 768,
+      "h": 782,
+      "bottom": 1806,
+      "right": 768
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-quiptic-1300-900x700.png",
+    "scrolledOnSelect": 0,
+    "iw": 900,
+    "ih": 700,
+    "docW": 885,
+    "hOverflow": false,
+    "grid": {
+      "x": 55,
+      "y": 413,
+      "w": 431,
+      "h": 431,
+      "bottom": 844,
+      "right": 486
+    },
+    "controls": {
+      "x": 39,
+      "y": 295,
+      "w": 807,
+      "h": 36,
+      "bottom": 331,
+      "right": 846
+    },
+    "activeClue": {
+      "x": 39,
+      "y": 343,
+      "w": 807,
+      "h": 42,
+      "bottom": 385,
+      "right": 846
+    },
+    "clues": {
+      "x": 510,
+      "y": 413,
+      "w": 320,
+      "h": 600,
+      "bottom": 1013,
+      "right": 830
+    },
+    "cell": 28.7,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-quiptic-1300-1366x657.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 657,
+    "docW": 1351,
+    "hOverflow": false,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 672
+    },
+    "controls": {
+      "x": 54,
+      "y": 339,
+      "w": 1244,
+      "h": 41,
+      "bottom": 380,
+      "right": 1297
+    },
+    "activeClue": {
+      "x": 54,
+      "y": 393,
+      "w": 1244,
+      "h": 47,
+      "bottom": 440,
+      "right": 1297
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1019
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-quiptic-1300-1366x768.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1351,
+    "hOverflow": false,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 672
+    },
+    "controls": {
+      "x": 54,
+      "y": 339,
+      "w": 1244,
+      "h": 41,
+      "bottom": 380,
+      "right": 1297
+    },
+    "activeClue": {
+      "x": 54,
+      "y": 393,
+      "w": 1244,
+      "h": 47,
+      "bottom": 440,
+      "right": 1297
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1019
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-quiptic-1300-1920x1080.png",
+    "scrolledOnSelect": 0,
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1905,
+    "hOverflow": false,
+    "grid": {
+      "x": 86,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 686
+    },
+    "controls": {
+      "x": 68,
+      "y": 339,
+      "w": 1770,
+      "h": 41,
+      "bottom": 380,
+      "right": 1838
+    },
+    "activeClue": {
+      "x": 68,
+      "y": 393,
+      "w": 1770,
+      "h": 47,
+      "bottom": 440,
+      "right": 1838
+    },
+    "clues": {
+      "x": 713,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1033
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "before-cryptic-29800-375x812.png",
+    "scrolledOnSelect": 0,
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "hOverflow": false,
+    "grid": {
+      "x": 0,
+      "y": 524,
+      "w": 375,
+      "h": 375,
+      "bottom": 899,
+      "right": 375
+    },
+    "controls": {
+      "x": 12,
+      "y": 327,
+      "w": 351,
+      "h": 119,
+      "bottom": 446,
+      "right": 363
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 458,
+      "w": 351,
+      "h": 42,
+      "bottom": 500,
+      "right": 363
+    },
+    "clues": {
+      "x": 0,
+      "y": 923,
+      "w": 375,
+      "h": 855,
+      "bottom": 1778,
+      "right": 375
+    },
+    "cell": 25,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "1 Across: One saluting domestic appliance (7)"
+  },
+  {
+    "file": "before-cryptic-29800-768x1024.png",
+    "scrolledOnSelect": 0,
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "hOverflow": false,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600,
+      "bottom": 1001,
+      "right": 684
+    },
+    "controls": {
+      "x": 12,
+      "y": 287,
+      "w": 744,
+      "h": 36,
+      "bottom": 323,
+      "right": 756
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 335,
+      "w": 744,
+      "h": 42,
+      "bottom": 377,
+      "right": 756
+    },
+    "clues": {
+      "x": 0,
+      "y": 1025,
+      "w": 768,
+      "h": 782,
+      "bottom": 1806,
+      "right": 768
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "before-cryptic-29800-900x700.png",
+    "scrolledOnSelect": 0,
+    "iw": 900,
+    "ih": 700,
+    "docW": 885,
+    "hOverflow": false,
+    "grid": {
+      "x": 55,
+      "y": 413,
+      "w": 431,
+      "h": 431,
+      "bottom": 844,
+      "right": 486
+    },
+    "controls": {
+      "x": 39,
+      "y": 295,
+      "w": 807,
+      "h": 36,
+      "bottom": 331,
+      "right": 846
+    },
+    "activeClue": {
+      "x": 39,
+      "y": 343,
+      "w": 807,
+      "h": 42,
+      "bottom": 385,
+      "right": 846
+    },
+    "clues": {
+      "x": 510,
+      "y": 413,
+      "w": 320,
+      "h": 600,
+      "bottom": 1013,
+      "right": 830
+    },
+    "cell": 28.7,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "before-cryptic-29800-1366x657.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 657,
+    "docW": 1351,
+    "hOverflow": false,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 672
+    },
+    "controls": {
+      "x": 54,
+      "y": 339,
+      "w": 1244,
+      "h": 41,
+      "bottom": 380,
+      "right": 1297
+    },
+    "activeClue": {
+      "x": 54,
+      "y": 393,
+      "w": 1244,
+      "h": 47,
+      "bottom": 440,
+      "right": 1297
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1019
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "before-cryptic-29800-1366x768.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1351,
+    "hOverflow": false,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 672
+    },
+    "controls": {
+      "x": 54,
+      "y": 339,
+      "w": 1244,
+      "h": 41,
+      "bottom": 380,
+      "right": 1297
+    },
+    "activeClue": {
+      "x": 54,
+      "y": 393,
+      "w": 1244,
+      "h": 47,
+      "bottom": 440,
+      "right": 1297
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1019
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "before-cryptic-29800-1920x1080.png",
+    "scrolledOnSelect": 0,
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1905,
+    "hOverflow": false,
+    "grid": {
+      "x": 86,
+      "y": 471,
+      "w": 600,
+      "h": 600,
+      "bottom": 1071,
+      "right": 686
+    },
+    "controls": {
+      "x": 68,
+      "y": 339,
+      "w": 1770,
+      "h": 41,
+      "bottom": 380,
+      "right": 1838
+    },
+    "activeClue": {
+      "x": 68,
+      "y": 393,
+      "w": 1770,
+      "h": 47,
+      "bottom": 440,
+      "right": 1838
+    },
+    "clues": {
+      "x": 713,
+      "y": 471,
+      "w": 320,
+      "h": 600,
+      "bottom": 1071,
+      "right": 1033
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Across: One saluting domestic appliance (7)"
+  }
+]

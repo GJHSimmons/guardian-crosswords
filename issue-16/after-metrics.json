@@ -1,0 +1,542 @@
+[
+  {
+    "file": "after-quiptic-1300-375x812.png",
+    "scrolledOnSelect": 0,
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "hOverflow": false,
+    "grid": {
+      "x": 0,
+      "y": 537,
+      "w": 375,
+      "h": 375,
+      "bottom": 912,
+      "right": 375
+    },
+    "controls": {
+      "x": 12,
+      "y": 327,
+      "w": 351,
+      "h": 119,
+      "bottom": 446,
+      "right": 363
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 458,
+      "w": 351,
+      "h": 55,
+      "bottom": 513,
+      "right": 363
+    },
+    "clues": {
+      "x": 0,
+      "y": 912,
+      "w": 375,
+      "h": 965,
+      "bottom": 1877,
+      "right": 375
+    },
+    "cell": 25,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-quiptic-1300-768x1024.png",
+    "scrolledOnSelect": 0,
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "hOverflow": false,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600,
+      "bottom": 1001,
+      "right": 684
+    },
+    "controls": {
+      "x": 12,
+      "y": 287,
+      "w": 744,
+      "h": 36,
+      "bottom": 323,
+      "right": 756
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 335,
+      "w": 744,
+      "h": 42,
+      "bottom": 377,
+      "right": 756
+    },
+    "clues": {
+      "x": 0,
+      "y": 1001,
+      "w": 768,
+      "h": 818,
+      "bottom": 1818,
+      "right": 768
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-quiptic-1300-900x700.png",
+    "scrolledOnSelect": 0,
+    "iw": 900,
+    "ih": 700,
+    "docW": 900,
+    "hOverflow": false,
+    "grid": {
+      "x": 63,
+      "y": 132,
+      "w": 431,
+      "h": 431,
+      "bottom": 563,
+      "right": 494
+    },
+    "controls": {
+      "x": 518,
+      "y": 132,
+      "w": 320,
+      "h": 70,
+      "bottom": 201,
+      "right": 838
+    },
+    "activeClue": {
+      "x": 518,
+      "y": 209,
+      "w": 320,
+      "h": 53,
+      "bottom": 262,
+      "right": 838
+    },
+    "clues": {
+      "x": 518,
+      "y": 274,
+      "w": 320,
+      "h": 288,
+      "bottom": 563,
+      "right": 838
+    },
+    "cell": 28.7,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-quiptic-1300-1366x657.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 657,
+    "docW": 1366,
+    "hOverflow": false,
+    "grid": {
+      "x": 79,
+      "y": 112,
+      "w": 514,
+      "h": 514,
+      "bottom": 625,
+      "right": 593
+    },
+    "controls": {
+      "x": 620,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 980
+    },
+    "activeClue": {
+      "x": 620,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 980
+    },
+    "clues": {
+      "x": 620,
+      "y": 272,
+      "w": 360,
+      "h": 354,
+      "bottom": 625,
+      "right": 980
+    },
+    "cell": 34.3,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-quiptic-1300-1366x768.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1366,
+    "hOverflow": false,
+    "grid": {
+      "x": 79,
+      "y": 112,
+      "w": 600,
+      "h": 600,
+      "bottom": 712,
+      "right": 679
+    },
+    "controls": {
+      "x": 706,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 1066
+    },
+    "activeClue": {
+      "x": 706,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 1066
+    },
+    "clues": {
+      "x": 706,
+      "y": 272,
+      "w": 360,
+      "h": 440,
+      "bottom": 712,
+      "right": 1066
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-quiptic-1300-1920x1080.png",
+    "scrolledOnSelect": 0,
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1920,
+    "hOverflow": false,
+    "grid": {
+      "x": 93,
+      "y": 112,
+      "w": 600,
+      "h": 600,
+      "bottom": 712,
+      "right": 693
+    },
+    "controls": {
+      "x": 720,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 1080
+    },
+    "activeClue": {
+      "x": 720,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 1080
+    },
+    "clues": {
+      "x": 720,
+      "y": 272,
+      "w": 360,
+      "h": 440,
+      "bottom": 712,
+      "right": 1080
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "8 Down: Conservative interrupting small bank clerk, one prov"
+  },
+  {
+    "file": "after-cryptic-29800-375x812.png",
+    "scrolledOnSelect": 0,
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "hOverflow": false,
+    "grid": {
+      "x": 0,
+      "y": 537,
+      "w": 375,
+      "h": 375,
+      "bottom": 912,
+      "right": 375
+    },
+    "controls": {
+      "x": 12,
+      "y": 327,
+      "w": 351,
+      "h": 119,
+      "bottom": 446,
+      "right": 363
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 458,
+      "w": 351,
+      "h": 55,
+      "bottom": 513,
+      "right": 363
+    },
+    "clues": {
+      "x": 0,
+      "y": 912,
+      "w": 375,
+      "h": 891,
+      "bottom": 1803,
+      "right": 375
+    },
+    "cell": 25,
+    "gridScrolls": false,
+    "gridFullyVisible": false,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "after-cryptic-29800-768x1024.png",
+    "scrolledOnSelect": 0,
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "hOverflow": false,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600,
+      "bottom": 1001,
+      "right": 684
+    },
+    "controls": {
+      "x": 12,
+      "y": 287,
+      "w": 744,
+      "h": 36,
+      "bottom": 323,
+      "right": 756
+    },
+    "activeClue": {
+      "x": 12,
+      "y": 335,
+      "w": 744,
+      "h": 42,
+      "bottom": 377,
+      "right": 756
+    },
+    "clues": {
+      "x": 0,
+      "y": 1001,
+      "w": 768,
+      "h": 818,
+      "bottom": 1818,
+      "right": 768
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Across: One saluting domestic appliance (7)"
+  },
+  {
+    "file": "after-cryptic-29800-900x700.png",
+    "scrolledOnSelect": 0,
+    "iw": 900,
+    "ih": 700,
+    "docW": 900,
+    "hOverflow": false,
+    "grid": {
+      "x": 63,
+      "y": 132,
+      "w": 431,
+      "h": 431,
+      "bottom": 563,
+      "right": 494
+    },
+    "controls": {
+      "x": 518,
+      "y": 132,
+      "w": 320,
+      "h": 70,
+      "bottom": 201,
+      "right": 838
+    },
+    "activeClue": {
+      "x": 518,
+      "y": 209,
+      "w": 320,
+      "h": 53,
+      "bottom": 262,
+      "right": 838
+    },
+    "clues": {
+      "x": 518,
+      "y": 274,
+      "w": 320,
+      "h": 288,
+      "bottom": 563,
+      "right": 838
+    },
+    "cell": 28.7,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "after-cryptic-29800-1366x657.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 657,
+    "docW": 1366,
+    "hOverflow": false,
+    "grid": {
+      "x": 79,
+      "y": 112,
+      "w": 514,
+      "h": 514,
+      "bottom": 625,
+      "right": 593
+    },
+    "controls": {
+      "x": 620,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 980
+    },
+    "activeClue": {
+      "x": 620,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 980
+    },
+    "clues": {
+      "x": 620,
+      "y": 272,
+      "w": 360,
+      "h": 354,
+      "bottom": 625,
+      "right": 980
+    },
+    "cell": 34.3,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "after-cryptic-29800-1366x768.png",
+    "scrolledOnSelect": 0,
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1366,
+    "hOverflow": false,
+    "grid": {
+      "x": 79,
+      "y": 112,
+      "w": 600,
+      "h": 600,
+      "bottom": 712,
+      "right": 679
+    },
+    "controls": {
+      "x": 706,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 1066
+    },
+    "activeClue": {
+      "x": 706,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 1066
+    },
+    "clues": {
+      "x": 706,
+      "y": 272,
+      "w": 360,
+      "h": 440,
+      "bottom": 712,
+      "right": 1066
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  },
+  {
+    "file": "after-cryptic-29800-1920x1080.png",
+    "scrolledOnSelect": 0,
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1920,
+    "hOverflow": false,
+    "grid": {
+      "x": 93,
+      "y": 112,
+      "w": 600,
+      "h": 600,
+      "bottom": 712,
+      "right": 693
+    },
+    "controls": {
+      "x": 720,
+      "y": 112,
+      "w": 360,
+      "h": 78,
+      "bottom": 190,
+      "right": 1080
+    },
+    "activeClue": {
+      "x": 720,
+      "y": 199,
+      "w": 360,
+      "h": 60,
+      "bottom": 258,
+      "right": 1080
+    },
+    "clues": {
+      "x": 720,
+      "y": 272,
+      "w": 360,
+      "h": 440,
+      "bottom": 712,
+      "right": 1080
+    },
+    "cell": 40,
+    "gridScrolls": false,
+    "gridFullyVisible": true,
+    "activeClueVisible": true,
+    "activeClueText": "1 Down: Heads of trade and industry caught hiding illegal pr"
+  }
+]
