@@ -50,6 +50,8 @@ export default function App() {
   const gridSize = useRef({ width: 15, height: 15 })
   const pendingState = useRef(null)
   const suppressEmit = useRef(false)
+  const revealAllSnapshot = useRef(null) // guesses map from just before the last reveal-all
+  const [canUndoRevealAll, setCanUndoRevealAll] = useState(false)
 
   const showFeedback = useCallback((kind, msg) => {
     if (feedbackTimer.current) clearTimeout(feedbackTimer.current)
@@ -70,6 +72,8 @@ export default function App() {
     setCellOwners({})
     playerGuesses.current = {}
     pendingState.current = null
+    revealAllSnapshot.current = null
+    setCanUndoRevealAll(false)
     try {
       const res = await fetch(`/api/crossword/${puzzleType}/${puzzleNumber}`)
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
@@ -168,6 +172,8 @@ export default function App() {
       if (crosswordRef.current) crosswordRef.current.reset()
       playerGuesses.current = {}
       setCellOwners({})
+      revealAllSnapshot.current = null
+      setCanUndoRevealAll(false)
     }
     function onPlayerList({ players: p }) { setPlayers(p) }
     socket.on('current_state', onCurrentState)
@@ -322,6 +328,8 @@ export default function App() {
 
   const revealAll = useCallback(() => {
     if (!crosswordRef.current || !data) return
+    revealAllSnapshot.current = { ...playerGuesses.current }
+    setCanUndoRevealAll(true)
     crosswordRef.current.fillAllAnswers()
     for (const dir of ['across', 'down']) {
       for (const num of Object.keys(data[dir])) {
@@ -333,11 +341,33 @@ export default function App() {
     }
   }, [data, getWordCells, emitCell])
 
+  const undoRevealAll = useCallback(() => {
+    if (!crosswordRef.current || !data || !revealAllSnapshot.current) return
+    const snapshot = revealAllSnapshot.current
+    for (const dir of ['across', 'down']) {
+      for (const num of Object.keys(data[dir])) {
+        getWordCells(dir, num).forEach(({ row, col }) => {
+          const key = `${row},${col}`
+          const prior = snapshot[key] || ''
+          crosswordRef.current.setGuess(row, col, prior)
+          if (prior) playerGuesses.current[key] = prior
+          else delete playerGuesses.current[key]
+          emitCell(row, col, prior)
+        })
+      }
+    }
+    revealAllSnapshot.current = null
+    setCanUndoRevealAll(false)
+    showFeedback('info', 'Reveal undone')
+  }, [data, getWordCells, emitCell, showFeedback])
+
   const clearAll = useCallback(() => {
     if (!crosswordRef.current) return
     crosswordRef.current.reset()
     playerGuesses.current = {}
     setCellOwners({})
+    revealAllSnapshot.current = null
+    setCanUndoRevealAll(false)
     if (currentRoom.current) socket.emit('clear_all', { game_id: currentRoom.current.game_id })
   }, [])
 
@@ -422,6 +452,9 @@ export default function App() {
               <span className="control-label">All:</span>
               <button onClick={checkAll} className="btn-check">Check</button>
               <button onClick={revealAll} className="btn-reveal">Reveal</button>
+              {canUndoRevealAll && (
+                <button onClick={undoRevealAll} className="btn-undo">Undo Reveal</button>
+              )}
               <button onClick={clearAll} className="btn-clear">Clear</button>
             </div>
           </div>
