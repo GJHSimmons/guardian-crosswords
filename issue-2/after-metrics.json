@@ -1,0 +1,302 @@
+[
+  {
+    "file": "after-cryptic-29800-320.png",
+    "iw": 320,
+    "ih": 568,
+    "docW": 320,
+    "grid": {
+      "x": 0,
+      "y": 605,
+      "w": 360,
+      "h": 360
+    },
+    "clues": {
+      "x": 0,
+      "y": 989,
+      "w": 320,
+      "h": 984
+    },
+    "cell": 24,
+    "gridScrolls": true
+  },
+  {
+    "file": "after-cryptic-29800-375.png",
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "grid": {
+      "x": 0,
+      "y": 589,
+      "w": 375,
+      "h": 375
+    },
+    "clues": {
+      "x": 0,
+      "y": 988,
+      "w": 375,
+      "h": 855
+    },
+    "cell": 25,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-cryptic-29800-768.png",
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 0,
+      "y": 1025,
+      "w": 768,
+      "h": 782
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-cryptic-29800-1366.png",
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1351,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-cryptic-29800-1920.png",
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1905,
+    "grid": {
+      "x": 86,
+      "y": 471,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 713,
+      "y": 471,
+      "w": 320,
+      "h": 600
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quiptic-1300-320.png",
+    "iw": 320,
+    "ih": 568,
+    "docW": 320,
+    "grid": {
+      "x": 0,
+      "y": 605,
+      "w": 360,
+      "h": 360
+    },
+    "clues": {
+      "x": 0,
+      "y": 989,
+      "w": 320,
+      "h": 1075
+    },
+    "cell": 24,
+    "gridScrolls": true
+  },
+  {
+    "file": "after-quiptic-1300-375.png",
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "grid": {
+      "x": 0,
+      "y": 556,
+      "w": 375,
+      "h": 375
+    },
+    "clues": {
+      "x": 0,
+      "y": 955,
+      "w": 375,
+      "h": 929
+    },
+    "cell": 25,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quiptic-1300-768.png",
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "grid": {
+      "x": 84,
+      "y": 401,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 0,
+      "y": 1025,
+      "w": 768,
+      "h": 782
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quiptic-1300-1366.png",
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1351,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 699,
+      "y": 471,
+      "w": 320,
+      "h": 600
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quiptic-1300-1920.png",
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1905,
+    "grid": {
+      "x": 86,
+      "y": 471,
+      "w": 600,
+      "h": 600
+    },
+    "clues": {
+      "x": 713,
+      "y": 471,
+      "w": 320,
+      "h": 600
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quickcryptic-50-320.png",
+    "iw": 320,
+    "ih": 568,
+    "docW": 320,
+    "grid": {
+      "x": 0,
+      "y": 605,
+      "w": 320,
+      "h": 320
+    },
+    "clues": {
+      "x": 0,
+      "y": 949,
+      "w": 320,
+      "h": 642
+    },
+    "cell": 29.1,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quickcryptic-50-375.png",
+    "iw": 375,
+    "ih": 812,
+    "docW": 375,
+    "grid": {
+      "x": 0,
+      "y": 570,
+      "w": 375,
+      "h": 375
+    },
+    "clues": {
+      "x": 0,
+      "y": 969,
+      "w": 375,
+      "h": 587
+    },
+    "cell": 34.1,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quickcryptic-50-768.png",
+    "iw": 768,
+    "ih": 1024,
+    "docW": 768,
+    "grid": {
+      "x": 164,
+      "y": 401,
+      "w": 440,
+      "h": 440
+    },
+    "clues": {
+      "x": 0,
+      "y": 865,
+      "w": 768,
+      "h": 551
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quickcryptic-50-1366.png",
+    "iw": 1366,
+    "ih": 768,
+    "docW": 1351,
+    "grid": {
+      "x": 72,
+      "y": 471,
+      "w": 440,
+      "h": 440
+    },
+    "clues": {
+      "x": 539,
+      "y": 471,
+      "w": 320,
+      "h": 440
+    },
+    "cell": 40,
+    "gridScrolls": false
+  },
+  {
+    "file": "after-quickcryptic-50-1920.png",
+    "iw": 1920,
+    "ih": 1080,
+    "docW": 1920,
+    "grid": {
+      "x": 93,
+      "y": 471,
+      "w": 440,
+      "h": 440
+    },
+    "clues": {
+      "x": 560,
+      "y": 471,
+      "w": 320,
+      "h": 440
+    },
+    "cell": 40,
+    "gridScrolls": false
+  }
+]
