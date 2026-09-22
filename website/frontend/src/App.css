@@ -474,8 +474,19 @@ h1 {
   border-radius: 3px;
   cursor: pointer;
   font-family: inherit;
+  display: inline-grid;
+  transition: background-color 0.15s;
 }
 .btn-copy-link:hover { opacity: 0.85; }
+
+/* "Copied!" confirmation (#18). Both labels occupy the same grid cell and
+   the hidden one still takes up space, so the button keeps one width
+   whichever label is showing. */
+.btn-copy-link > span { grid-area: 1 / 1; }
+.btn-copy-link-done { visibility: hidden; }
+.btn-copy-link.copied { background: #1e7e34; }
+.btn-copy-link.copied .btn-copy-link-idle { visibility: hidden; }
+.btn-copy-link.copied .btn-copy-link-done { visibility: visible; }
 
 .players-row {
   display: flex;
