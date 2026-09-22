@@ -435,7 +435,10 @@ export default function App() {
               onCellChange={handleCellChange}
             >
               <SelectionWatcher onSelectionChange={handleClueSelected} />
-              <div style={{ position: 'relative', flex: '1 1 auto', minWidth: 0, minHeight: 0 }}>
+              <div
+                className="grid-container"
+                style={{ aspectRatio: `${gridSize.current.width} / ${gridSize.current.height}` }}
+              >
                 <CrosswordGrid />
                 <PlayerOverlay
                   cellOwners={cellOwners}
