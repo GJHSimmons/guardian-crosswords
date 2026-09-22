@@ -4,14 +4,14 @@
   padding: 0;
 }
 
-/* react-crossword's grid SVG ships with a viewBox but no width/height,
-   leaving sizing to us; without a definite size here it either balloons
-   unbounded on wide screens or collapses to zero on narrow ones. */
+/* react-crossword's grid SVG ships with a viewBox but no width/height.
+   We give .grid-container an explicit width and let the SVG take its height
+   from the viewBox, rather than forcing height: 100% down a chain that only
+   works if every browser treats an aspect-ratio height as definite. */
 .grid-container .crossword.grid,
-.grid-container .crossword.grid > div,
 .crossword.grid svg {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -88,7 +88,19 @@ h1 {
   font-size: 0.9rem;
 }
 
+/* Grid sizing (#13): shrink to fit, but never below --min-cell per cell;
+   past that floor .grid-scroll scrolls instead. --cols/--rows are set
+   inline per puzzle. --grid-max-w is the widest the grid may get: no
+   taller than the viewport, and no more than --max-cell per cell. */
 .crossword-wrapper {
+  --min-cell: 24px;
+  --max-cell: 40px;
+  --grid-max-h: calc(100vh - 2.5rem);
+  --grid-max-h: calc(100dvh - 2.5rem);
+  --grid-max-w: min(
+    calc(var(--grid-max-h) * var(--cols) / var(--rows)),
+    calc(var(--cols) * var(--max-cell))
+  );
   background: white;
   padding: 1rem;
   border-radius: 4px;
@@ -98,20 +110,22 @@ h1 {
   align-items: flex-start;
 }
 
+.grid-scroll {
+  /* Start at the widest allowed size; shrink when the row is narrower. */
+  flex: 0 1 var(--grid-max-w);
+  min-width: 0;
+  overflow-x: auto;
+}
+
 .grid-container {
   position: relative;
-  /* Definite flex-basis, capped, so the grid can't grow past a sane size;
-     aspect-ratio (set inline, per-puzzle) derives height from that width. */
-  flex: 1 1 min(65vh, 600px);
-  max-width: min(65vh, 600px);
-  min-width: 0;
-  min-height: 0;
+  width: max(calc(var(--cols) * var(--min-cell)), 100%);
 }
 
 .clues-panel {
   flex: 0 0 320px;
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: calc(var(--grid-max-w) * var(--rows) / var(--cols));
 }
 
 .clues-panel .direction {
@@ -143,23 +157,37 @@ h1 {
   opacity: 0.5;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 899.98px) {
+  /* Phone/tablet: single column, clues below, grid full-bleed across the
+     screen so a 15x15 still clears the cell floor on a 360px phone. */
+  .app {
+    max-width: none;
+    padding: 1rem 0.75rem;
+  }
+
   .crossword-wrapper {
+    --grid-max-h: calc(100vh - 1rem);
+    --grid-max-h: calc(100dvh - 1rem);
     flex-direction: column;
+    align-items: stretch;
+    margin-inline: -0.75rem;
+    padding: 0.75rem 0;
+    border-radius: 0;
+  }
+
+  .grid-scroll {
+    flex: none;
   }
 
   .grid-container {
-    /* Stacked layout: width is no longer competing with the clues panel
-       for horizontal space, so size from the viewport's own width rather
-       than the vh-based cap meant for the side-by-side desktop layout. */
-    flex-basis: auto;
-    width: 100%;
-    max-width: 100%;
+    width: max(calc(var(--cols) * var(--min-cell)), min(100%, var(--grid-max-w)));
+    margin-inline: auto;
   }
 
   .clues-panel {
+    flex: none;
     max-height: none;
-    width: 100%;
+    padding-inline: 0.75rem;
   }
 
   .clues-panel .clue {
@@ -168,6 +196,10 @@ h1 {
 
   .clues-panel .header {
     font-size: 0.95rem;
+  }
+
+  .control-group {
+    flex-wrap: wrap;
   }
 }
 
