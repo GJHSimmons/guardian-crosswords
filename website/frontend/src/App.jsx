@@ -25,6 +25,17 @@ function SelectionWatcher({ onSelectionChange }) {
   return null
 }
 
+// Publishes the selected row as --focus-row so App.css can re-position the
+// library's focus box without its drifting 0.995 factor (#23).
+function GridContainer({ children }) {
+  const { selectedPosition } = useContext(CrosswordContext)
+  return (
+    <div className="grid-container" style={{ '--focus-row': selectedPosition.row }}>
+      {children}
+    </div>
+  )
+}
+
 export default function App() {
   const [type, setType] = useState('quiptic')
   const [number, setNumber] = useState('')
@@ -530,7 +541,7 @@ export default function App() {
               </div>
 
               <div className="grid-scroll">
-                <div className="grid-container">
+                <GridContainer>
                   <CrosswordGrid />
                   <PlayerOverlay
                     cellOwners={cellOwners}
@@ -539,7 +550,7 @@ export default function App() {
                     gridWidth={gridSize.width}
                     gridHeight={gridSize.height}
                   />
-                </div>
+                </GridContainer>
               </div>
               <div className="clues-panel">
                 <DirectionClues direction="across" />
