@@ -15,6 +15,16 @@
   display: block;
 }
 
+/* The library places its focus box (an <input> over the selected cell, whose
+   focus ring is what players see) at top = row x cell height x 0.995, a fudge
+   for its wrapper being a few px taller than the grid. With the SVG sized as
+   above, wrapper and SVG are the same height, so the fudge drifts the box up
+   by 0.5% of a cell per row: 2.8px by the bottom of a 40px-cell 15x15 (#23).
+   Same position without the fudge; --focus-row is set by GridContainer. */
+.grid-container input[aria-label="crossword-input"] {
+  top: calc(var(--focus-row) * 100% / var(--rows) + 2px) !important;
+}
+
 body {
   font-family: Georgia, serif;
   background: #f5f5f0;
