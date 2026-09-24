@@ -1,0 +1,1372 @@
+[
+  {
+    "puzzle": "cryptic-29800",
+    "w": 320,
+    "h": 568,
+    "iw": 320,
+    "docW": 320,
+    "svgW": 360,
+    "svgH": 360,
+    "innerDivH": 360,
+    "wrapperH": 360,
+    "gridContainerH": 360,
+    "scrolls": true,
+    "worstFocus": 1.7,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 0,
+        "cellPx": 24,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 14,
+        "cellPx": 24,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 0,
+        "cellPx": 24,
+        "focus": {
+          "dy": -0.85,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 14,
+        "cellPx": 24,
+        "focus": {
+          "dy": -0.85,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 0,
+        "cellPx": 24,
+        "focus": {
+          "dy": -1.7,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 14,
+        "cellPx": 24,
+        "focus": {
+          "dy": -1.7,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "cryptic-29800",
+    "w": 375,
+    "h": 812,
+    "iw": 375,
+    "docW": 375,
+    "svgW": 375,
+    "svgH": 375,
+    "innerDivH": 375,
+    "wrapperH": 375,
+    "gridContainerH": 375,
+    "scrolls": false,
+    "worstFocus": 1.76,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 0,
+        "cellPx": 25,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 14,
+        "cellPx": 25,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 0,
+        "cellPx": 25,
+        "focus": {
+          "dy": -0.88,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 14,
+        "cellPx": 25,
+        "focus": {
+          "dy": -0.88,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 0,
+        "cellPx": 25,
+        "focus": {
+          "dy": -1.76,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 14,
+        "cellPx": 25,
+        "focus": {
+          "dy": -1.76,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "cryptic-29800",
+    "w": 768,
+    "h": 1024,
+    "iw": 768,
+    "docW": 768,
+    "svgW": 600,
+    "svgH": 600,
+    "innerDivH": 600,
+    "wrapperH": 600,
+    "gridContainerH": 600,
+    "scrolls": false,
+    "worstFocus": 2.82,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "cryptic-29800",
+    "w": 1366,
+    "h": 768,
+    "iw": 1366,
+    "docW": 1366,
+    "svgW": 600,
+    "svgH": 600,
+    "innerDivH": 600,
+    "wrapperH": 600,
+    "gridContainerH": 600,
+    "scrolls": false,
+    "worstFocus": 2.82,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "cryptic-29800",
+    "w": 1920,
+    "h": 1080,
+    "iw": 1920,
+    "docW": 1920,
+    "svgW": 600,
+    "svgH": 600,
+    "innerDivH": 600,
+    "wrapperH": 600,
+    "gridContainerH": 600,
+    "scrolls": false,
+    "worstFocus": 2.82,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 7,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1.41,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 14,
+        "col": 14,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2.82,
+          "dx": -0.01,
+          "dh": -0.02,
+          "dw": -0.02,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "quickcryptic-50",
+    "w": 320,
+    "h": 568,
+    "iw": 320,
+    "docW": 320,
+    "svgW": 320,
+    "svgH": 320,
+    "innerDivH": 320,
+    "wrapperH": 320,
+    "gridContainerH": 320,
+    "scrolls": false,
+    "worstFocus": 1.46,
+    "worstTint": 0.02,
+    "rows": [
+      {
+        "row": 0,
+        "col": 2,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.02,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": -0.01,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 0,
+        "col": 10,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 5,
+        "col": 0,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -0.74,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.01
+        }
+      },
+      {
+        "row": 5,
+        "col": 10,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -0.74,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 10,
+        "col": 0,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -1.46,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.02,
+          "dLeft": 0,
+          "dRight": -0.01
+        }
+      },
+      {
+        "row": 10,
+        "col": 8,
+        "cellPx": 29.09,
+        "focus": {
+          "dy": -1.46,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.02,
+          "dLeft": -0.01,
+          "dRight": -0.02
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "quickcryptic-50",
+    "w": 375,
+    "h": 812,
+    "iw": 375,
+    "docW": 375,
+    "svgW": 375,
+    "svgH": 375,
+    "innerDivH": 375,
+    "wrapperH": 375,
+    "gridContainerH": 375,
+    "scrolls": false,
+    "worstFocus": 1.71,
+    "worstTint": 0.02,
+    "rows": [
+      {
+        "row": 0,
+        "col": 2,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.02,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": -0.01,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 0,
+        "col": 10,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -0.01,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 5,
+        "col": 0,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -0.87,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.01
+        }
+      },
+      {
+        "row": 5,
+        "col": 10,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -0.87,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.01,
+          "dLeft": 0,
+          "dRight": -0.02
+        }
+      },
+      {
+        "row": 10,
+        "col": 0,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -1.71,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.02,
+          "dLeft": 0,
+          "dRight": -0.01
+        }
+      },
+      {
+        "row": 10,
+        "col": 8,
+        "cellPx": 34.09,
+        "focus": {
+          "dy": -1.71,
+          "dx": -0.01,
+          "dh": -0.01,
+          "dw": -0.01,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": -0.02,
+          "dLeft": -0.01,
+          "dRight": -0.02
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "quickcryptic-50",
+    "w": 768,
+    "h": 1024,
+    "iw": 768,
+    "docW": 768,
+    "svgW": 440,
+    "svgH": 440,
+    "innerDivH": 440,
+    "wrapperH": 440,
+    "gridContainerH": 440,
+    "scrolls": false,
+    "worstFocus": 2,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 2,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 8,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "quickcryptic-50",
+    "w": 1366,
+    "h": 768,
+    "iw": 1366,
+    "docW": 1366,
+    "svgW": 440,
+    "svgH": 440,
+    "innerDivH": 440,
+    "wrapperH": 440,
+    "gridContainerH": 440,
+    "scrolls": false,
+    "worstFocus": 2,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 2,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 8,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  },
+  {
+    "puzzle": "quickcryptic-50",
+    "w": 1920,
+    "h": 1080,
+    "iw": 1920,
+    "docW": 1920,
+    "svgW": 440,
+    "svgH": 440,
+    "innerDivH": 440,
+    "wrapperH": 440,
+    "gridContainerH": 440,
+    "scrolls": false,
+    "worstFocus": 2,
+    "worstTint": 0,
+    "rows": [
+      {
+        "row": 0,
+        "col": 2,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 0,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": 0,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 5,
+        "col": 10,
+        "cellPx": 40,
+        "focus": {
+          "dy": -1,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 0,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      },
+      {
+        "row": 10,
+        "col": 8,
+        "cellPx": 40,
+        "focus": {
+          "dy": -2,
+          "dx": 0,
+          "dh": 0,
+          "dw": 0,
+          "active": true,
+          "focusVisible": true,
+          "outline": "auto"
+        },
+        "tint": {
+          "dTop": 0,
+          "dBottom": 0,
+          "dLeft": 0,
+          "dRight": 0
+        }
+      }
+    ]
+  }
+]
